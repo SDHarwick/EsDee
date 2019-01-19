@@ -37,15 +37,15 @@ By default, your root password is empty. So press `ENTER` and you will log into 
 
 ```
  > ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
- > CREATE DATABASE WSB_DB;
+ > CREATE DATABASE SD_DB;
  > USE WSB_DB;
 ```
 
 On the command prompt run the following commands:
 
 ``` 
- $ git clone https://github.com/SDHarwick/WebsiteBrokerage.git
- $ cd WebsiteBrokerage
+ $ git clone https://github.com/SDHarwick/EsDee.git
+ $ cd EsDee
  $ cp .env.example .env (edit it with your secret key and database information)
 ```
 
@@ -61,7 +61,7 @@ DB_CLIENT=mysql
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=root
-DB_NAME=WSB_DB
+DB_NAME=SD_DB
 DB_PORT=3306
 
 TOKEN_SECRET_KEY=secretkeyforjsonwebtoken
