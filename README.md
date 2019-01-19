@@ -38,7 +38,7 @@ By default, your root password is empty. So press `ENTER` and you will log into 
 ```
  > ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
  > CREATE DATABASE SD_DB;
- > USE WSB_DB;
+ > USE SD_DB;
 ```
 
 On the command prompt run the following commands:
@@ -111,3 +111,6 @@ Navigate to http://localhost:3000/swagger for the API documentation.
 - Declarative routing for React - [React-Router](https://reacttraining.com/react-router/)
 - Promise based HTTP client - [Axios](https://github.com/mzabriskie/axios)
 - Code linting tool - [ESLint](http://eslint.org/)
+- CI/CD [TravisCI](https://travis-ci.com)
+- Server deployment - [Heroku](https://dashboard.heroku.com)
+- Client Side Bundler/Builder - [Webpack 4](https://webpack.js.org/)
