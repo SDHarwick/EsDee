@@ -1,45 +1,113 @@
-# Online Code Editor
-A full stack web application for online programming, built with React(Frontend) and Express(Backend).
-<kbd>![image](/public/codeeditor.png)</kbd>
+MySQL, Express, React/Redux and Node Boilerplate in ES6/ES7
 
-# Function
-This application is used for online coding. After selecting the programming language, you can start to write code. Below are the highlighted features.
-* Five programming languages are supported, including c, c++, java, javascript and python.
-* Syntax highlighting for different languages.
-* Compilation and execution are supported. The proper result or error message will be displayed.
+## Get Started
 
-# Technology
-The Server is built with Express. The used libraries for server are listed as follows.
-* RESTful API: express, express router, cors
-* Compilation & Execution: spawn in node.js
+### 1. Prerequisites
 
-The Client is built with React and 3rd-party libraries, see below.
-* Styling: bootstrap
-* Rich Text Editor: react-ace
+- [NodeJs](https://nodejs.org/en/)
+- [NPM](https://npmjs.org/) - Node package manager
 
-# Demo
-Two available demos:
-* `Live Demo on Netlify:` <a href="https://code-editor-react.netlify.com/" target="\_blank">https://code-editor-react.netlify.com/</a>
-* `Live Demo on Azure:` <a href="https://code-editor.azurewebsites.net/" target="\_blank">https://code-editor.azurewebsites.net/</a>
+### 2. Installation
 
-*Note: The demo websites may be slow when you access them for the first time. Be patient!*
-
-# Setup Locally
-```bash
-git clone https://github.com/jojozhuang/code-editor-react.git
-cd code-editor-react
-npm install
-npm run dev
+Start by installing Homebrew, Node, and MySQL
+Homebrew:
 ```
-Access http://localhost:3000/ in web browser and click 'Code Editor' button, enjoy!
+ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
-# Deployment
-Follow tutorial [Deploying Full Stack React App to Heroku](https://jojozhuang.github.io/tutorial/react/deploying-full-stack-react-app-to-heroku/) to deploy the React app to Heroku(RESTful API + Frontend React).
+Node
+```
+ $ brew install node
+```
 
-Follow tutorial [Continuously Deploy Full Stack React App to Heroku and Netlify with Travis-CI](https://jojozhuang.github.io/tutorial/react/continuously-deploy-full-stack-react-app-to-heroku-and-netlify-with-travis-ci/) to continuously deploy this Full Stack app to Heroku(RESTful API) and Netlify(Frontend React).
+MySQL
+```
+ $ brew install mysql
+```
 
-# Portfolio
-Read portfolio [Code Editor(React)](https://jojozhuang.github.io/portfolio/code-editor-react/) to learn the main functions of this code editor.
+Once you have installed MySQL you will need to log in and update the password for the root user. Run the following commands:
 
-# Tutorial
-Read tutorial [Building Online Code Editor with React and Express](https://jojozhuang.github.io/tutorial/react/building-online-code-editor-with-react-and-express/) to learn how this online code editor is built.
+```
+ $ mysql.server start
+ $ mysql -u root -p
+```
+
+
+By default, your root password is empty. So press `ENTER` and you will log into a MySQL shell. We will need to update the password to `root`. To do so, run the following inside of the MySQL shell:
+
+```
+ > ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+ > CREATE DATABASE WSB_DB;
+ > USE WSB_DB;
+```
+
+On the command prompt run the following commands:
+
+``` 
+ $ git clone https://github.com/SDHarwick/WebsiteBrokerage.git
+ $ cd WebsiteBrokerage
+ $ cp .env.example .env (edit it with your secret key and database information)
+```
+
+ Example configuration:
+
+```
+APP_PORT=3000
+APP_HOST=127.0.0.1
+
+NODE_ENV = development
+
+DB_CLIENT=mysql
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=root
+DB_NAME=WSB_DB
+DB_PORT=3306
+
+TOKEN_SECRET_KEY=secretkeyforjsonwebtoken
+
+LOGGING_DIR=logs
+```
+
+Then run:
+
+```
+ $ npm install
+ $ npm run migrate
+ ```
+
+ Finally, start and build the application:
+ 
+```
+ $ npm run build (For development)
+ $ npm run build:prod (For production)
+```
+
+List of NPM Commands:
+ 
+```
+  $ npm run lint       # linting
+  $ npm run clean      # remove dist and node_modules folder and install dependencies
+```
+
+### 3. Usage
+
+URL : http://localhost:3000/
+
+Navigate to http://localhost:3000/swagger for the API documentation.
+
+### 4. Useful Link
+- Web framework for Node.js - [Express](http://expressjs.com/)
+- JavaScript ORM  for Node.js - [Bookshelf](http://bookshelfjs.org/)
+- SQL Query Builder for Postgres, MSSQL, MySQL, MariaDB, SQLite3, and Oracle - [Knex](http://knexjs.org/)
+- JSON Web Tokens(jwt) - [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
+- Logging Library - [Winston](https://www.npmjs.com/package/winston)
+- Object schema validation  - [Joi](https://www.npmjs.com/package/joi)
+- API documentation using [swagger-jsdoc](https://www.npmjs.com/package/swagger-jsdoc) and [swagger-ui](https://www.npmjs.com/package/swagger-ui)
+- JavaScript library for building user interfaces - [React](https://facebook.github.io/react/)
+- Predictable state container - [Redux](http://redux.js.org/)
+- A React component library implementing Google's Material Design - [Material-UI](https://material-ui-1dab0.firebaseapp.com/)
+- Redux Form - [Redux Form](http://redux-form.com/7.4.2/)
+- Declarative routing for React - [React-Router](https://reacttraining.com/react-router/)
+- Promise based HTTP client - [Axios](https://github.com/mzabriskie/axios)
+- Code linting tool - [ESLint](http://eslint.org/)
