@@ -1,0 +1,15 @@
+.vscode
+node_modules
+dist
+*.log
+src/server/compiler/temp
+
+/.idea
+/node_modules
+.env
+/logs
+/dist
+.DS_Store
+
+package-lock.json
+npm-debug.log

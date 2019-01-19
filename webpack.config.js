@@ -52,7 +52,7 @@ const commonConfig = merge([
 ]);
 
 const productionConfig = merge([
-  parts.loadEnv('https://wsb-api.herokuapp.com'),
+  parts.loadEnv('https://esdee-api.herokuapp.com'),
 
   parts.extractCSS({
     use: 'css-loader',
