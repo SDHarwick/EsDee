@@ -1,0 +1,4 @@
+/api/*  https://wsb-api.herokuapp.com/api/:splat  200
+/styles/*	https://wsb-api.herokuapp.com/styles/:splat 200
+/img/*	https://wsb-api.herokuapp.com/img/:splat 200
+/*    /index.html   200

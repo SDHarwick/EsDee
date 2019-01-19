@@ -1,0 +1,40 @@
+body, h1, h2, h3, h4, h5, h6 {
+    font-size: 15px;
+    margin: 0;
+    line-height: 24px;
+}
+
+body {
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+body, html, #app, #app > div {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #5e9fe5;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #80bcfc;
+}
+
+a:visited {
+    color: #5e9fe5;
+}
+
+/*This style is dumb - will change later*/
+
+.copyright {
+    padding-right: 55px;
+    padding-left: 35px;
+}
+
+
+.star:hover {
+    background: blue;
+}
