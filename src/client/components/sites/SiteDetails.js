@@ -146,10 +146,10 @@ class SiteDetails extends Component {
                             <p className={classes.field}><span className={classes.teal}> Visitors: </span> {this.state.site.visitors} </p>
                             <p className={classes.field}><span className={classes.teal}> Page Views: </span> {this.state.site.page_views} </p>
                             <p className={classes.field}><span className={classes.teal}> URL: </span> {this.state.site.website_url} </p>
-                            <p className={classes.field}><span className={classes.teal}> Website Category: </span> {this.state.site.category} </p>
+                            <p className={classes.field}><span className={classes.teal}> Listing Category: </span> {this.state.site.category} </p>
 
                             <div> 
-                                <p className={classes.field}><span className={classes.teal}>Website Description: </span></p> 
+                                <p className={classes.field}><span className={classes.teal}>Listing Description: </span></p> 
                                 <div id="description" dangerouslySetInnerHTML={{__html: this.state.site.website_description}} className={classes.field}></div> 
                             </div>
 

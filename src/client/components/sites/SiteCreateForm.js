@@ -82,7 +82,7 @@ class SiteCreateForm extends Component {
                 <Card className={classes.card}>
                     <CardHeader
                         className={classes.cardHeader}
-                        title="Sell Your Website"
+                        title="Sell Your Listing"
                     />
                     <CardContent>
                         <form method="post" onSubmit={handleSubmit(onSubmit)}>
@@ -97,14 +97,14 @@ class SiteCreateForm extends Component {
                                 type="text"
                                 name="site_title"
                                 component={renderText}
-                                label="Site Title"
+                                label="Listing Title"
                             />
                             <br />
                             <Field
                                 type="text"
                                 name="website_url"
                                 component={renderText}
-                                label="Site URL"
+                                label="Listing URL"
                             />
                             <p>Category   </p>
                             <Field component="select" name="category" label="Category">
@@ -159,7 +159,7 @@ class SiteCreateForm extends Component {
                             {/*<Field component="textarea" rows="10" type="text" name="website_description" label="Business Description" />*/}
 
                             <div className={classes.editor}>
-                            <h1>Website Description</h1>
+                            <h1>Listing Description</h1>
                                 <EditorField
                                     key="field"
                                     name="website_description"

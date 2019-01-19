@@ -117,7 +117,7 @@ class AdminDashboard extends Component {
             </ListItemIcon>
             <Link to={'/sites/' + id}>
               <ListItemText
-                primary="Site Title:"
+                primary="Listing Title:"
                 secondary={site_title} 
               />
             </Link>
@@ -126,7 +126,7 @@ class AdminDashboard extends Component {
               secondary={currency_type + " " + asking_price}
             />
             <ListItemText
-              primary="Site Visitors:"
+              primary="Listing Visitors:"
               secondary={visitors} 
             />
             <ListItem
@@ -136,7 +136,7 @@ class AdminDashboard extends Component {
               href={website_url} 
             >
               <ListItemText
-                primary="Website URL: "
+                primary="Listing URL: "
                 secondary={website_url}
               />
             </ListItem>

@@ -106,7 +106,7 @@ class SiteEditForm extends Component {
                 <Card className={classes.card}>
                     <CardHeader
                         className={classes.cardHeader}
-                        title="Sell Your Website"
+                        title="Sell Your Listing"
                     />
                     <CardContent>
                         <form method="post" onSubmit={handleSubmit(onSubmit)}>
@@ -122,14 +122,14 @@ class SiteEditForm extends Component {
                                 type="text"
                                 name="site_title"
                                 component={renderText}
-                                label="Site Title"
+                                label="Listing Title"
                             />
                             <br />
                             <Field
                                 type="text"
                                 name="website_url"
                                 component={renderText}
-                                label="Site URL"
+                                label="Listing URL"
                             />
                             <p>Category   </p>
                             <Field component="select" name="category" label="Category">
