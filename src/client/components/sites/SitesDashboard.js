@@ -212,7 +212,7 @@ class SitesDashboard extends Component {
 
     return (
       <div>
-        <h1 className={classes.search_header}> SEARCH FOR SITES</h1>
+        <h1 className={classes.search_header}> SEARCH FOR LISTINGS</h1>
         <Grid container className={classes.search_root} spacing={24}>
           <Grid item>
             <InputLabel htmlFor="filter-helper">Search By..</InputLabel>
@@ -241,14 +241,14 @@ class SitesDashboard extends Component {
 
         <Paper>
           <List className={classes.root}>
-            <ListSubheader className={classes.subheader}>Sites For Sale</ListSubheader>
+            <ListSubheader className={classes.subheader}>Listings For Sale</ListSubheader>
               {this.renderSites(/*this.paginationStart()*/0, this.state.count || 10)}
           </List>
         </Paper>
         <br />
         <br />
         <div className={classes.site_loader}>
-          <Button className={classes.site_loader} onClick={() => this.getPagination()}>Load More Sites</Button>
+          <Button className={classes.site_loader} onClick={() => this.getPagination()}>Load More Listings</Button>
         </div>
 
         <Grid container>
