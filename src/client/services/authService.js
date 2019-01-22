@@ -16,7 +16,8 @@ export function login({email, password}) {
             setToken(response.data.token);
             setUser(response.data.id);
             // window.location.href = BASE_URL + 'sites';
-            window.location.href = 'https://esdee.netlify.com/sites';
+            // window.location.href = 'https://esdee.netlify.com/sites';
+            window.location.replace('https://esdee.netlify.com/sites')
 
             
         })
