@@ -362,7 +362,8 @@ const Dashboard = props => {
               color="primary"
               className={classes.button}
             >
-              Sell My Business
+              <Link to={'/about'}>About Us
+              </Link>
             </Button>
           </Grid>
         </Grid>
