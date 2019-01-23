@@ -164,7 +164,7 @@ class SitesDashboard extends Component {
               <Grid item xl={2} lg={2}>
                 <Link to={'/sites/' + id}>
                   <ListItemText
-                    primary="Site Title:"
+                    primary="Listing Title:"
                     secondary={site_title} 
                   />
                 </Link>
@@ -177,7 +177,7 @@ class SitesDashboard extends Component {
               </Grid>
               <Grid item xl={2} lg={2}>
                 <ListItemText
-                  primary="Site Visitors:"
+                  primary="Listing Visitors:"
                   secondary={visitors} 
                 />
               </Grid>
@@ -189,7 +189,7 @@ class SitesDashboard extends Component {
                   href={website_url} 
                 >
                   <ListItemText
-                    primary="Website URL: "
+                    primary="Listing URL: "
                     secondary={website_url}
                   />
                 </ListItem>
