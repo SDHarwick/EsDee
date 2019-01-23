@@ -28,6 +28,7 @@ class SignUpContainer extends Component {
 
         this.props.actions.submitForm(USERS, formProps);
         this.props.login.login(formProps);
+        window.location.replace('https://esdee.netlify.com/alert')
     }
 
     render() {

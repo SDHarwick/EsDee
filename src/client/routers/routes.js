@@ -22,6 +22,7 @@ import MessageDashboard from '../containers/messages/MessageContainer';
 import AboutUsDashboard from '../containers/about/AboutUsContainer';
 import Sites from '../containers/sites/SitesContainer';
 import SiteDetails from '../containers/sites/SiteDetailsContainer';
+import Alert from '../containers/alert/alertContainer';
 import Admin from '../containers/admin/adminContainer';
 import SiteEditContainer from '../containers/sites/SiteEditContainer';
 import SiteEditForm from '../components/sites/SiteEditForm';
@@ -40,6 +41,7 @@ const Router = () => (
                 <MainLayout>
                     <Switch>
                         <Route exact path="/sites" component={Sites}/>
+                        <Route exact path="/alert" component={Alert}/>
                         <Route exact path="/sites/:id" component={SiteDetails}/>
                         <Route path="/sites/:id/message" component={MessageCreateForm}/>
                         <Route path="/edit/:id" component={SiteEditContainer}/>
