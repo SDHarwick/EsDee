@@ -104,12 +104,9 @@ class MessageDetails extends Component {
                                 <p className={classes.field}><span className={classes.teal}>Message Body: </span></p> 
                                 <p dangerouslySetInnerHTML={{__html: this.props.location.body}} className={classes.field}></p> 
                             </div>
-                            <Button>
-                                <Link to={'/account/messages'}>Back to Message Dashboard</Link>
-                            </Button>
-                            <Button style={{float:'right'}}>
-                                <Link to={newTo}>Reply To Sender</Link>
-                            </Button>
+                                <Link to={'/account/messages'}><Button>Back to Message Dashboard</Button></Link>
+                                <Link to={newTo}><Button style={{float:'right'}}>Reply To Sender</Button></Link>
+                            
 
                             { /*<p className={classes.field}><span className={classes.teal}>Contact the seller: </span> {this.state.site.contact_email}</p>
                             <Button>

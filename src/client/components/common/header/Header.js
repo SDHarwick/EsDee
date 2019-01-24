@@ -72,8 +72,8 @@ class Header extends Component {
         if (this.props.accountType === 'admin'){
             return (
                 <span>
-                    <Button><Link to={'/account'}>My Account</Link></Button>
-                    <Button><Link to={'/admin'}>Admin</Link></Button>
+                    <Link to={'/account'}><Button>My Account</Button></Link>
+                    <Link to={'/admin'}><Button>Admin</Button></Link>
                     <Logout />
                 </span>
             );
@@ -82,16 +82,16 @@ class Header extends Component {
                 <span>
                     <Payments />
                     <span style={{color:'black', paddingLeft:'5px'}}>Credits: {this.props.credits || 0}</span>
-                    <Button><Link to={'/account'}>My Account</Link></Button>
-                    <Button><Link to={'/admin'}>Admin</Link></Button>
+                    <Link to={'/account'}><Button>My Account</Button></Link>
+                    <Link to={'/admin'}><Button>Admin</Button></Link>
                     <Logout />
                 </span>
             );
         } else {
             return(
                 <span>
-                    <Button><Link to={'/signup'}>Sign Up</Link></Button>
-                    <Button><Link to={'/login'}>Login</Link></Button>
+                    <Link to={'/signup'}><Button>Sign Up</Button></Link>
+                    <Link to={'/login'}><Button>Login</Button></Link>
                 </span>
             );
         }
@@ -113,9 +113,9 @@ class Header extends Component {
                         <Typography type="title" color="inherit" className={classes.flex}>
                             <Link to={'/'}><img className="logo-2" src="https://esdee.netlify.com/public/images/EsDeeLogoReal.png" /></Link>
                         </Typography>
-                        <Button><Link to={'/sites'}>Marketplace</Link></Button>
-                        <Button><Link to={'/blog'}>Blog</Link></Button>
-                        <Button><Link to={'/about'}>About Us</Link></Button>
+                        <Link to={'/sites'}><Button>Marketplace</Button></Link>
+                        <Link to={'/blog'}><Button>Blog</Button></Link>
+                        <Link to={'/about'}><Button>About Us</Button></Link>
                         {this.renderContent()} 
                     </Toolbar>
                 </AppBar>

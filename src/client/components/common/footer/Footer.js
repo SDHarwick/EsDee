@@ -26,13 +26,13 @@ class Footer extends Component {
         return (
 
             <div className={classes.legal}>
-                <Button><Link to={'/faq'}>FAQ</Link></Button>
-                <Button><Link to={'/testimonials'}>Testimonials</Link></Button>
+                <Link to={'/faq'}><Button>FAQ</Button></Link>
+                <Link to={'/testimonials'}><Button>Testimonials</Button></Link>
                 <div className="copyright">
                     © 2018 <a href="javascript:void(0);">The EsDee Corp. - Stephen Daniel Harwick</a>
                 </div>
-                <Button><Link to={'/blog'}>Blog</Link></Button>
-                <Button><Link to={'/about'}>About Us</Link></Button>
+                <Link to={'/blog'}><Button>Blog</Button></Link>
+                <Link to={'/about'}><Button>About Us</Button></Link>
             </div>
         )
     }

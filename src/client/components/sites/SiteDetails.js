@@ -154,12 +154,9 @@ class SiteDetails extends Component {
                             </div>
 
                             <p className={classes.field}><span className={classes.teal}>Contact the seller: </span> {this.state.site.contact_email}</p>
-                            <Button>
-                                <Link to={'/sites'}>Back to Marketplace</Link>
-                            </Button>
-                            <Button style={{float:'right'}}>
-                                <Link to={newTo}>Message the Seller</Link>
-                            </Button>
+                                <Link to={'/sites'}><Button>Back to Marketplace</Button></Link>
+                                <Link to={newTo}><Button style={{float:'right'}}>Message the Seller</Button></Link>
+                            
                         </CardContent>
 
                     </Card>

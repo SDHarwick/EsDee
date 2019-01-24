@@ -145,7 +145,7 @@ class MessageDashboard extends Component {
               secondary={subject}
             />
             
-            <Button><Link to={newTo}>View Message</Link></Button>
+            <Link to={newTo}><Button>View Message</Button></Link>
           </ListItem>
           <Divider inset={true}/>
         </div>
