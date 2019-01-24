@@ -24,11 +24,11 @@ class SignUpContainer extends Component {
      *
      * @param {object} formProps
      */
-    submitForm(formProps) {
+    async submitForm(formProps) {
 
         // this.props.actions.submitForm(USERS, formProps);
-        this.props.actions.submitSignUpForm(USERS, formProps);
-        // this.props.login.login(formProps);
+        await this.props.actions.submitSignUpForm(USERS, formProps);
+        this.props.login.login(formProps);
         // window.location.replace('https://esdee.netlify.com/alert');
     }
 
