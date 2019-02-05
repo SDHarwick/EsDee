@@ -26,6 +26,7 @@ import Alert from '../containers/alert/alertContainer';
 import Admin from '../containers/admin/adminContainer';
 import SiteEditContainer from '../containers/sites/SiteEditContainer';
 import SiteEditForm from '../components/sites/SiteEditForm';
+import ComingSoon from '../components/comingsoon/ComingSoon';
 import MessageDetails from '../components/messages/MessageDetails';
 import AuthenticatedRoute from './AuthenticatedRoute';
 
@@ -42,6 +43,9 @@ const Router = () => (
                     <Switch>
                         <Route exact path="/sites" component={Sites}/>
                         <Route exact path="/alert" component={Alert}/>
+                        <Route exact path="/faq" component={ComingSoon}/>
+                        <Route exact path="/testimonials" component={ComingSoon}/>
+                        <Route exact path="/blog" component={ComingSoon}/>
                         <Route exact path="/sites/:id" component={SiteDetails}/>
                         <Route path="/sites/:id/message" component={MessageCreateForm}/>
                         <Route path="/edit/:id" component={SiteEditContainer}/>
