@@ -93,6 +93,7 @@ class SitesDashboard extends Component {
 
   async componentDidMount() {
     this.props.fetchSitesSuccess();
+    window.scrollTo(0, 0)
   }
 
   // paginationStart(page) {
