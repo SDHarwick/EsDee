@@ -67,6 +67,7 @@ class SiteCreateForm extends Component {
     async componentDidMount() {
         let user = await this.getUserById();
         this.setState({user});
+        window.scrollTo(0, 0)
     }
 
 

@@ -85,7 +85,10 @@ class MessageDashboard extends Component {
 
   async componentDidMount() {
     this.props.fetchMessagesSuccess();
+    window.scrollTo(0, 0);
   }
+
+  
 
   // paginationStart(page) {
   //   let n = page || 0;

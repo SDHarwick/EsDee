@@ -71,6 +71,7 @@ class MessageReplyForm extends Component {
         this.props.initialize({recipient_id: RID, sender_id: SID, site_id: SiteId});
         let user = await this.getUserById();
         this.setState({user});
+        window.scrollTo(0, 0);
     }
 
 
