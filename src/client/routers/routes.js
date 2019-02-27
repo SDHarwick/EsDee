@@ -27,6 +27,7 @@ import Admin from '../containers/admin/adminContainer';
 import SiteEditContainer from '../containers/sites/SiteEditContainer';
 import SiteEditForm from '../components/sites/SiteEditForm';
 import ComingSoon from '../components/comingsoon/ComingSoon';
+import UserManagementContainer from '../containers/userManagement/userManagementContainer';
 import MessageDetails from '../components/messages/MessageDetails';
 import AuthenticatedRoute from './AuthenticatedRoute';
 
@@ -49,6 +50,7 @@ const Router = () => (
                         <Route exact path="/sites/:id" component={SiteDetails}/>
                         <Route path="/sites/:id/message" component={MessageCreateForm}/>
                         <Route path="/edit/:id" component={SiteEditContainer}/>
+                        <AuthenticatedRoute exact path="/usermanagement" component={UserManagementContainer}/>
                         <AuthenticatedRoute path="/new" component={SiteCreateForm}/>
                         <AuthenticatedRoute path="/admin" component={Admin}/>
                         <AuthenticatedRoute exact path="/account" component={AccountDashboard}/>
