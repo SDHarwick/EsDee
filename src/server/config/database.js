@@ -13,5 +13,9 @@ export default {
         tableName: 'migrations',
         directory: process.cwd() + '/src/server/migrations',
     },
+    seeds: {
+        tableName: 'seeds',
+        directory: process.cwd() + '/src/server/seeds',
+    }
     debug: true
 };

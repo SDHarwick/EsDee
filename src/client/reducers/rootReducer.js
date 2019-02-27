@@ -5,12 +5,14 @@ import {reducer as formReducer} from 'redux-form';
 import authReducer from './authReducer';
 import sitesReducer from './sitesReducer';
 import userReducer from './userReducer';
+import usersReducer from './usersReducer';
 import messagesReducer from './messagesReducer';
 import adminReducer from './adminReducer';
 
 const rootReducer = combineReducers({
     auth: authReducer,
     user: userReducer,
+    users: usersReducer,
     sites: sitesReducer,
     messages: messagesReducer,
     admin: adminReducer,

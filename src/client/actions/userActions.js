@@ -2,7 +2,9 @@ import axios from 'axios';
 import {getToken, getUser } from '../utils/storageUtil';
 
 import {
-    FETCH_USER_SUCCESS
+    FETCH_USER_SUCCESS,
+    FETCH_USERS_SUCCESS,
+    DELETE_USER_SUCCESS
 } from '../constants/actionType';
 
 export const handleToken = (token) => async dispatch => {
@@ -24,4 +26,35 @@ export const fetchUserSuccess = () => async dispatch => {
   });
 
   dispatch({ type: FETCH_USER_SUCCESS, payload: res.data });
+};
+
+
+
+export const fetchUsersSuccess = () => async dispatch => {
+  const res = await axios.get('/api/users', {
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Authorization': 'Bearer' + ' ' + getToken()
+    }
+  });
+
+  console.log(res);
+
+  dispatch({ type: FETCH_USERS_SUCCESS, payload: res.data });
+};
+
+
+
+export const deleteUserSuccess = (id) => async dispatch => {
+  const body = {status: 1};
+  const res = await axios.put('/api/users/' + id, body, {
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Authorization': 'Bearer' + ' ' + getToken()
+    }
+  });
+
+  dispatch({ type: DELETE_USER_SUCCESS, payload: res.data });
 };
